@@ -5,8 +5,7 @@ Link problem:
 http://oj.hueuni.edu.vn/contest/192/problem/652/details
 '''
 
-def main():
-    s = raw_input()
+def solve(s):
     x = 0
     y = 0
     go = [0, 0, 0, 0]
@@ -37,4 +36,8 @@ def main():
         print("Yes")
     else:
         print("No")
-main()
+
+if __name__ == "__main__":
+    s = raw_input()
+    solve(s)
+    
