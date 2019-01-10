@@ -10,7 +10,7 @@ def main():
     x = 0
     y = 0
     go = [0, 0, 0, 0]
-    ok = False
+    ok = True
     for c in s:
         if c == 'S':
             go[0] = 1
@@ -20,12 +20,19 @@ def main():
             go[2] = 1
         elif c == 'E':
             go[3] = 1
-    if go[0] and go[1] and not go[2] and not go[3]:
+    '''if go[0] and go[1] and not go[2] and not go[3]:
         ok = True
     if not go[0] and not go[1] and go[2] and go[3]:
         ok = True
     if go[0] and go[1] and go[2] and go[3]:
-        ok = False
+        ok = True'''
+
+    for i in range(len(go)):
+        if i % 2 == 1:
+            if not go[i - 1] and go[i]:
+                ok = False
+            if go[i - 1] and not go[i]:
+                ok = False
     if ok:
         print("Yes")
     else:
