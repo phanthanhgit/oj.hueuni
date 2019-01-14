@@ -11,6 +11,5 @@ def main():
         s = 0
         for i in range(int(n)):
             s += n0*(d**i)
-            print(n0*(d**i))
         print("%.4f" % s)
 main()
