@@ -5,8 +5,8 @@ http://oj.hueuni.edu.vn/practice/problem/15/details
 '''
 
 def main():
-    #x, y = map(int, raw_input().split())
-    x, y = map(int, input().split())
+    x, y = map(int, raw_input().split())
+    #x, y = map(int, input().split())
     if x == y or y == x + 1:
         print(0)
     else:
@@ -14,7 +14,6 @@ def main():
         y -= 1
         print(y - x + 1)
         for i in range(x, y + 1):
-            if i != 0:
-                #print i,
-                print(i, end="") 
+            print i,
+            #print(i, end="") 
 main()
